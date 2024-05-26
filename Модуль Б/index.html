@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Гостиница для животных «Котейка»</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Гостиница для животных «Котейка»</h1>
+        <p>Москва, ул. Пушкинская, д. 10</p>
+        <p>Ваш питомец в надежных руках!</p>
+    </header>
+    <main>
+        <section id="rooms">
+            <h2>Наши номера</h2>
+            <?php include 'catalog.php'; ?>
+        </section>
+        <section id="reviews">
+            <h2>Отзывы</h2>
+            <?php include 'data.php'; echo getRandomReviews(5); ?>
+        </section>
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <?php echo getContacts(); ?>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

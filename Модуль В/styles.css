@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+}
+
+.screen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.active-screen {
+    display: flex;
+}
+
+#welcome-screen {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s;
+}
+
+#game-screen {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    animation: fadeIn 0.5s;
+}
+
+#game-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #333;
+    color: white;
+    width: 100%;
+}
+
+#game-area {
+    position: relative;
+    flex: 1;
+    background: url('background.jpg') repeat-x;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+}
+
+#player {
+    width: 50px;
+    height: 50px;
+    background: url('drone.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wall {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background: url('wall.png') no-repeat center center;
+    background-size: cover;
+}
+
+.battery {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url('battery.png') no-repeat center center;
+    background-size: contain;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #0072ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background: #005bb5;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#result-screen, #game-over-screen {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: white;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование - Праздник в каждый дом</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Праздник в каждый дом</div>
+    </header>
+    <section id="booking-form">
+        <h2>Оформление заказа</h2>
+        <form>
+            <label for="region">Регион:</label>
+            <input type="text" id="region" name="region" readonly value="Москва">
+            <label for="address">Адрес локации:</label>
+            <input type="text" id="address" name="address" readonly value="Парк Горького, ул. Крымский Вал, 9">
+            <label for="date">Дата мероприятия:</label>
+            <input type="date" id="date" name="date" readonly value="2023-06-01">
+            <label for="participants">Количество человек:</label>
+            <input type="number" id="participants" name="participants" readonly value="20">
+            <label for="cost">Стоимость:</label>
+            <input type="text" id="cost" name="cost" readonly value="10000 руб.">
+            <h3>Дополнительные услуги</h3>
+            <label><input type="checkbox" name="services" value="catering"> Организация питания</label>
+            <label><input type="checkbox" name="services" value="animators"> Услуги аниматоров</label>
+            <label><input type="checkbox" name="services" value="host"> Услуги ведущего</label>
+            <label><input type="checkbox" name="services" value="taxi"> Услуги детского такси</label>
+            <label for="comment">Комментарий:</label>
+            <textarea id="comment" name="comment"></textarea>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <p>Итоговая стоимость: <span id="total-cost">10000 руб.</span></p>
+            <button type="submit">Оформить бронирование</button>
+        </form>
+    </section>
+</body>
+</html>
