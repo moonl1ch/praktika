@@ -1,35 +1,134 @@
+/* frontend/style.css */
+
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f9f9f9;
 }
 
-header, main {
-    width: 80%;
-    margin: 0 auto;
+h1, h2 {
+    text-align: center;
+    color: #333;
 }
 
+/* Стили для главной страницы */
 header {
-    background-color: #f8f9fa;
-    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
     text-align: center;
 }
 
-section {
-    margin: 20px 0;
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
-.room, .booking {
+main {
+    padding: 20px;
+}
+
+.featured-rooms, .reviews, .contacts {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.featured-rooms ul, .reviews ul, .contacts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.featured-rooms li, .reviews li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.featured-rooms li:last-child, .reviews li:last-child {
+    border-bottom: none;
+}
+
+/* Стили для каталога номеров */
+.catalog {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.catalog form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.catalog form select, .catalog form button {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.catalog ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.catalog li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.catalog li:last-child {
+    border-bottom: none;
+}
+
+.catalog a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.catalog a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для формы бронирования */
+.booking-form {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.booking-form input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px 0;
+    border-radius: 3px;
 }
 
-button {
-    background-color: #007bff;
+.booking-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
     color: white;
-    padding: 10px;
     border: none;
+    border-radius: 3px;
     cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: #45a049;
 }
